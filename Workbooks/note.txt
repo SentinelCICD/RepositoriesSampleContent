@@ -1,0 +1,8 @@
+Import-Module .\ConvertWorkbooksToArm.ps1
+
+$newDirectory = New-Item -ItemType Directory -Path ".\Sample"
+foreach($workbookJson in $(Get-Item *.json))
+{
+     $outputFilePath = "$($newDirectory.FullName)\$($workbookJson.BaseName)_ARM.json"
+     ConvertWorkbooksToArm $workbookJson.FullName $outputFilePath
+}
