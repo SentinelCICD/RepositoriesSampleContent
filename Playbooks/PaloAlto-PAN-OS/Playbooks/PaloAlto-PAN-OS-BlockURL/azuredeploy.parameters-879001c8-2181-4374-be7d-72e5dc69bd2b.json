@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "PlaybookName": {
-            "value": "PaloAlto-PAN-OS-BlockURL (workspace specific)"
+            "value": "PaloAlto-PAN-OS-BlockURL_workspace"
         },
         "Address Group": {
             "Value": "SpecifyAWorkspaceSpecificAddressGroup"
