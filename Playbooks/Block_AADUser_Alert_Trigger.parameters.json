@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "PlaybookName": {
-            "Value": "Block-AADUser-Alert (Default)"
+            "Value": "Block-AADUser-Alert_Default"
         }
     }
 }
