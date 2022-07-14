@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "PlaybookName": {
-            "value": "PaloAlto-PAN-OS-BlockIP (default)"
+            "value": "PaloAlto-PAN-OS-BlockIP_default"
         },
         "Address Group": {
             "Value": "SpecifyADefaultAddressGroup"
