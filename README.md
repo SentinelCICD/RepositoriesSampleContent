@@ -2,7 +2,7 @@
 This repository provides examples on how to use parameter file with CI/CD feature. For questions and feedback, please contact [SentinelEcoDevs@microsoft.com](SentinelEcoDevs@microsoft.com) 
 
 # Sentinel Deployment Configuration
-The file sentinel-deployment.config is located at the root folder in the repository, it may contain three sections to deploy a list of content files in advace, exclude some content files, and map a content file to a parameter file. All path in the configuration file are full path from the root directory.
+The file sentinel-deployment.config is located at the root folder in the repository, it may contain three sections to deploy a list of content files in advace, exclude some content files, and map a content file to a parameter file. All paths in the configuration file are full paths from the root directory.
 1. prioritizedcontentfiles: a list of content files that would be deployed before the script traverse the entire repository for ARM templates.
 2. excludecontentfiles: a list of content files wouldn't be deployed.
 3. parameterfilemappings: a map to link a parameter file with a content file.
