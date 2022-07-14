@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "PlaybookName": {
-            "value": "PaloAlto-PAN-OS-GetURLCategoryInfo-test (default)"
+            "value": "PaloAlto-PAN-OS-GetURLCategoryInfo-test_default"
         }
     }
 }
