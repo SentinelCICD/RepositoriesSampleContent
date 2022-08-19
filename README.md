@@ -32,12 +32,12 @@ The file sentinel-deployment.config is located at the root folder in the reposit
     }
 
 # Parameter File Location 
-There are three types of parameter file:
-1. Mapped parameter file: the file path is specified in the deployment configuration.
+There are three types of parameter files:
+1. Mapped parameter files: the file path is specified in the deployment configuration.
 2. Workspace specific parameter file: the parameter file is named "<azurearmtemplate>.parameters-<workspaceId>.json", at the same folder as the content file "<azurearmtemplate>.json".
 3. Default specific parameter file: the parameter file is named "<azurearmtemplate>.parameters.json", at the same folder as the content file "<azurearmtemplate>.json".
 
 **Parameter file precedence**: The script priortizes paramter files based on the following order: 
 mapped parameter file > workspace specific parameter file > default parameter file 
 
-This means that if your repository has a specified parameter file mapping, it will use that as opposed to any workspace specific parameter file or any default parameter file found in the content file. 
+This means that if your repository has a specified parameter file mapping, it will use that as opposed to any workspace specific parameter file or any default parameter file found in the content file's folder. 
