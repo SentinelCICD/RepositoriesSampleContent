@@ -1,7 +1,7 @@
 # Sample Content Repository
-This repository provides examples on how to use parameter file with CI/CD feature. For questions and feedback, please contact [SentinelEcoDevs@microsoft.com](SentinelEcoDevs@microsoft.com) 
+This repository provides samples of deployable Sentinel content as well as examples on how to use parameter file with the Sentinel Repositories CI/CD feature. For questions and feedback, please contact [SentinelEcoDevs@microsoft.com](SentinelEcoDevs@microsoft.com) 
 
-*Please note* that this repository contains sample content that is not intended to be used as or in the place of any real security content. The sole intention of this repository is to help demonstrate the capabilities of Microsoft Sentinel Repositories.
+**Please note** that this repository contains sample content that is not intended to be used as or in the place of any real security content. The sole intention of this repository is to help demonstrate the capabilities of Microsoft Sentinel Repositories.
 
 # Sentinel Deployment Configuration
 The file sentinel-deployment.config is located at the root folder in the repository, it may contain three sections to deploy a list of content files in advace, exclude some content files, and map a content file to a parameter file. All paths in the configuration file are full paths from the root directory.
