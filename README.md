@@ -4,7 +4,7 @@ This repository provides samples of deployable Sentinel content as well as examp
 **Please note** that this repository contains sample content that is not intended to be used as or in the place of any real security content. The sole intention of this repository is to help demonstrate the capabilities of Microsoft Sentinel Repositories.
 
 # The Sample Content Folders
-You can find a variety of supported content to use in your test deployments in the respective content folders of this repositry. In addition, you can utilize the JSON or YAML to ARM scripts we've included in some folders (e.g. Detections, Hunting, and Workbooks) to convert your content files to the supported ARM format for repositories deployment. Please note that these scripts were used to convert some of the content in the [Azure Sentinel Community Repositority](https://github.com/Azure/Azure-Sentinel) but have not been tested on all variations of content, please use with care.
+You can find a variety of supported content to use in your test deployments in the respective content folders of this repository. In addition, you can utilize the JSON or YAML to ARM scripts we've included in some folders (e.g. Detections, Hunting, and Workbooks) to convert your content files to the supported ARM format for repositories deployment. Please note that these scripts were used to convert some of the content in the [Azure Sentinel Community Repository](https://github.com/Azure/Azure-Sentinel) but have not been tested on all variations of content, please use with care.
 
 # Scaling your CICD pipeline
 ## Sentinel Deployment Configuration
@@ -44,7 +44,10 @@ We've created three ways to pair your parameter files to your content files base
 2. Workspace specific parameter file: the parameter file is named "<azurearmtemplate>.parameters-<workspaceId>.json", at the same folder as the content file "<azurearmtemplate>.json". Your workspace ID can be used to here to allow the script to pair your parameter file(s) to your connected workspace. 
 3. Default specific parameter file: the parameter file is named "<azurearmtemplate>.parameters.json", at the same folder as the content file "<azurearmtemplate>.json". If neither of the two above mapping mechanisms are used, this would be the default and allows for parameter files to be automatically paired with whatever content files are present in the same folder.
 
-**Parameter file precedence**: The script priortizes paramter files based on the following order: 
+**Parameter file precedence**: The script prioritizes paramater files based on the following order: 
 mapped parameter file > workspace specific parameter file > default parameter file 
 
-This means that if your repository has a specified parameter file mapping, it will use that as opposed to any workspace specific parameter file or any default parameter file found in the content file's folder. 
+This means that if your repository has a specified parameter file mapping, it will use that as opposed to any workspace specific parameter file or any default parameter file found in the content file's folder.  
+
+![image](https://user-images.githubusercontent.com/66967658/194126802-24b1c47e-2ab4-48cf-bcaf-50b48dde2cd2.png)
+
