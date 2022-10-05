@@ -3,7 +3,12 @@ This repository provides samples of deployable Sentinel content as well as examp
 
 **Please note** that this repository contains sample content that is not intended to be used as or in the place of any real security content. The sole intention of this repository is to help demonstrate the capabilities of Microsoft Sentinel Repositories.
 
-# Sentinel Deployment Configuration
+#The content folders
+
+
+#Scaling your CICD pipeline
+## Sentinel Deployment Configuration
+To further customize your CICD pipeline beyond the default settings, you can modify your deployment workflow or utilize a configuration file to tailor your the pipeline to your specific needs - more in this in [the documentation](https://learn.microsoft.com/en-us/azure/sentinel/ci-cd-custom-deploy?tabs=github). 
 The file sentinel-deployment.config is located at the root folder in the repository, it may contain three sections to deploy a list of content files in advance, exclude some content files, and map content files to parameter files within the repository. All paths in the configuration file are full paths from the root directory.
 1. prioritizedcontentfiles: a list of content files that would be deployed before the script traverses the entire repository for ARM templates.
 2. excludecontentfiles: a list of content files wouldn't be deployed regardless of their type.
@@ -31,8 +36,10 @@ The file sentinel-deployment.config is located at the root folder in the reposit
       "DummySection": "This shouldn't impact deployment"
     }
 
-# Parameter File Location 
-There are three types of parameter files:
+## Parameter File usage
+Parameter files allow you to use a JSON file that contains the parameter values instead of passing the parameters as inline values in each of your content files. The general naming convention for the parameter file is to include parameters in the template name. For example, if your content file template is named PlaybookABC.json, your parameter file is named PlaybookABCparameters.json. 
+
+We've created three ways to pair your parameter files to your content files based on the above recommendation:
 1. Explicitly Mapped parameter files: the file path is specified in the deployment configuration. This mapping pairs up any parameter files with their corresponding content files. 
 2. Workspace specific parameter file: the parameter file is named "<azurearmtemplate>.parameters-<workspaceId>.json", at the same folder as the content file "<azurearmtemplate>.json". Your workspace ID can be used to here to allow the script to pair your parameter file(s) to your connected workspace. 
 3. Default specific parameter file: the parameter file is named "<azurearmtemplate>.parameters.json", at the same folder as the content file "<azurearmtemplate>.json". If neither of the two above mapping mechanisms are used, this would be the default and allows for parameter files to be automatically paired with whatever content files are present in the same folder.
