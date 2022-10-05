@@ -15,6 +15,8 @@ The file sentinel-deployment.config is located at the root folder in the reposit
 3. parameterfilemappings: a map to link a parameter file with a content file in the repository.
 
 * Configuration sample:
+```
+{
     {
       "prioritizedcontentfiles": [
         "parsers/Sample/ASimAuthenticationAWSCloudTrail.json",
@@ -35,6 +37,8 @@ The file sentinel-deployment.config is located at the root folder in the reposit
       },
       "DummySection": "This shouldn't impact deployment"
     }
+}
+```
 
 ## Parameter File usage
 Parameter files allow you to use a JSON file that contains the parameter values instead of passing the parameters as inline values in each of your content files. The general naming convention for the parameter file is to include parameters in the template name. For example, if your content file template is named PlaybookABC.json, your parameter file is named PlaybookABCparameters.json. 
