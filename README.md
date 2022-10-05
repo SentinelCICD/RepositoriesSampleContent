@@ -3,12 +3,12 @@ This repository provides samples of deployable Sentinel content as well as examp
 
 **Please note** that this repository contains sample content that is not intended to be used as or in the place of any real security content. The sole intention of this repository is to help demonstrate the capabilities of Microsoft Sentinel Repositories.
 
-#The content folders
+# The Sample Content Folders
+You can find a variety of supported content to use in your test deployments in the respective content folders of this repositry. In addition, you can utilize the JSON or YAML to ARM scripts we've included in some folders (e.g. Detections, Hunting, and Workbooks) to convert your content files to the supported ARM format for repositories deployment. Please note that these scripts were used to convert some of the content in the [Azure Sentinel Community Repositority](https://github.com/Azure/Azure-Sentinel) but have not been tested on all variations of content, please use with care.
 
-
-#Scaling your CICD pipeline
+# Scaling your CICD pipeline
 ## Sentinel Deployment Configuration
-To further customize your CICD pipeline beyond the default settings, you can modify your deployment workflow or utilize a configuration file to tailor your the pipeline to your specific needs - more in this in [the documentation](https://learn.microsoft.com/en-us/azure/sentinel/ci-cd-custom-deploy?tabs=github). 
+To further customize your CICD pipeline beyond the default settings, you can modify your deployment workflow or utilize a configuration file to tailor your the pipeline to your specific needs - more on this in [the documentation](https://learn.microsoft.com/en-us/azure/sentinel/ci-cd-custom-deploy?tabs=github). 
 The file sentinel-deployment.config is located at the root folder in the repository, it may contain three sections to deploy a list of content files in advance, exclude some content files, and map content files to parameter files within the repository. All paths in the configuration file are full paths from the root directory.
 1. prioritizedcontentfiles: a list of content files that would be deployed before the script traverses the entire repository for ARM templates.
 2. excludecontentfiles: a list of content files wouldn't be deployed regardless of their type.
