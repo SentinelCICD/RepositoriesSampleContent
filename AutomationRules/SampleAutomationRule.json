@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workspace": {
+            "type": "String"
+        }
+    },
+    "resources": [
+        {
+            "id": "[concat(resourceId('Microsoft.OperationalInsights/workspaces/providers', parameters('workspace'), 'Microsoft.SecurityInsights'),'/automationRules/85f2eac9-43f1-480e-b8ad-473375c195c0')]",
+            "name": "[concat(parameters('workspace'),'/Microsoft.SecurityInsights/85f2eac9-43f1-480e-b8ad-473375c195c0')]",
+            "type": "Microsoft.OperationalInsights/workspaces/providers/automationRules",
+            "kind": "Scheduled",
+            "apiVersion": "2019-01-01-preview",
+            "properties": {
+                "displayName": "Repositories automation rule 1",
+                "order": 1,
+                "triggeringLogic": {
+                    "isEnabled": true,
+                    "expirationTimeUtc": null,
+                    "triggersOn": "Incidents",
+                    "triggersWhen": "Created",
+                    "conditions": [
+                        {
+                            "conditionType": "Property",
+                            "conditionProperties": {
+                                "propertyName": "IncidentTactics",
+                                "operator": "Contains",
+                                "propertyValues": [
+                                    "Persistence"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "actions": [
+                    {
+                        "order": 1,
+                        "actionType": "ModifyProperties",
+                        "actionConfiguration": {
+                            "owner": {
+                                "objectId": "b18ef471-be11-439d-9279-5ce4e18b976e",
+                                "email": "SampleEmail@Contoso.com",
+                                "userPrincipalName": "SampleUser@Contoso.com"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
