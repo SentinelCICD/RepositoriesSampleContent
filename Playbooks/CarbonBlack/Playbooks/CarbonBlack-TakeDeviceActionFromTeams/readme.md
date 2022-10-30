@@ -11,11 +11,11 @@
      ![Comment example](./images/Incident_Comment.png)
 
 
-### Prerequisites 
+### Prerequisites
 1. CarbonBlack Custom Connector needs to be deployed prior to the deployment of this playbook under the same subscription.
 2. Generate an API key.Refer this link [ how to generate the API Key](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication/#creating-an-api-key)
 3. Find Organziation key by refering this link [ Find Organization key by refering this link ](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication/#creating-an-api-key)
-### Deployment instructions 
+### Deployment instructions
 1. Deploy the playbook by clicking on "Deploy to Azure" button. This will take you to deplyoing an ARM Template wizard.
 2. Fill in the required paramteres:
     * Playbook Name: Enter the playbook name here (Ex:CarbonBlack-TakeDeviceActionFromTeams)
@@ -24,11 +24,11 @@
     * Teams GroupId: Enter the Teams GroupId
     * Teams ChannelId: Enter the Teams ChannelId
       [Refer the below link to get the channel id and group id](https://docs.microsoft.com/powershell/module/teams/get-teamchannel?view=teams-ps)
-  
+
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FCarbonBlack%2FPlaybooks%2FCarbonBlack-TakeDeviceActionFromTeams%2Fazuredeploy.json) [![Deploy to Azure](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FCarbonBlack%2FPlaybooks%2FCarbonBlack-TakeDeviceActionFromTeams%2Fazuredeploy.json)
 
 
-### Post-Deployment instructions 
+### Post-Deployment instructions
 #### Authorize connections
 Once deployment is complete, you will need to authorize each connection.
 1.	Click the Azure Sentinel connection resource
@@ -38,7 +38,7 @@ Once deployment is complete, you will need to authorize each connection.
 5.	Click Save
 6.	Repeat step 2&3 while for CarbonBlack connector Connection to authorize connector API of the playbook (For authorizing the CarbonBlack API connection, API Key needs to be provided. API Key Value is the combination of API Key / API ID)
 #### Configurations in Sentinel
-1. In Azure sentinel analytical rules should be configured to trigger an incident with risky device 
+1. In Azure sentinel analytical rules should be configured to trigger an incident with risky device
 2. Configure the automation rules to trigger this playbook
 
 
@@ -68,7 +68,7 @@ Get the list of risky devices as entities from the Incident
 
   h. AdaptiveCardBody - Assing the dynamically prepared adaptive card body
 
-  i. Hosts - Assign the Hosts information 
+  i. Hosts - Assign the Hosts information
 
   j. CarbonBlackDeviceInformation - Assign the CarbonBlack device information
 

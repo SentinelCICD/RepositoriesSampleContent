@@ -2,14 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "metadata": {
-        "title": "Block AAD user - Alert", 
+        "title": "Block AAD user - Alert",
         "description": "For each account entity included in the alert, this playbook will disable the user in Azure Active Directoy and add a comment to the incident that contains this alert",
         "prerequisites": "",
-        "lastUpdateTime": "2021-07-14T00:00:00.000Z", 
-        "entities": ["Account"], 
-        "tags": ["Remediation"], 
+        "lastUpdateTime": "2021-07-14T00:00:00.000Z",
+        "entities": [ "Account" ],
+        "tags": [ "Remediation" ],
         "support": {
-            "tier": "community" 
+            "tier": "community"
         },
         "author": {
             "name": "Nicholas DiCola"
@@ -19,7 +19,7 @@
         "PlaybookName": {
             "defaultValue": "Block-AADUser-Alert",
             "type": "string"
-        }, 
+        },
         "workspace": {
             "type": "string"
         }
@@ -235,10 +235,10 @@
                                 "connectionName": "[variables('AzureSentinelConnectionName')]",
                                 "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azuresentinel')]",
                                 "connectionProperties": {
-                        "authentication": {
-                            "type": "ManagedServiceIdentity"
-                        }
-                    }
+                                    "authentication": {
+                                        "type": "ManagedServiceIdentity"
+                                    }
+                                }
                             }
                         }
                     }

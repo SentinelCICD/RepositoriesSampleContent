@@ -6,12 +6,12 @@ foreach($file in (Get-Item ***\*.json))
 try{
   $parser = Get-Content -Path $validParserPath | ConvertFrom-Json -Depth $jsonConversionDepth
   $currentParser = Get-Content $file.FullName | ConvertFrom-Json -Depth $jsonConversionDepth
-  $parser.resources[0].properties = $currentParser.resources[0].resources[0].properties 
+  $parser.resources[0].properties = $currentParser.resources[0].resources[0].properties
   $parser.resources[0].name = "[concat(parameters('workspace'), '/" + $currentParser.resources[0].resources[0].name + "')]"
   $parser | ConvertTo-Json -EscapeHandling Default -Depth $jsonConversionDepth | Set-Content -Path ".\Sample\$($file.Name)"
 } catch
 {
-    "Error on process file: $($file.FullName)" 
+    "Error on process file: $($file.FullName)"
 }
 }
 

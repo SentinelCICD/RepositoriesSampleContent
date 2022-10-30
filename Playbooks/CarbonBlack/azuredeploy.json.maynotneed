@@ -66,7 +66,7 @@
       "metadata": {
         "description": "(Optional: can be configured in the playbook) For playbook which sends an adaptive card to response from Teams. This is the Channel ID of the Team channel"
       }
-    }, 
+    },
     "workspace": {
        "type": "string"
     }
