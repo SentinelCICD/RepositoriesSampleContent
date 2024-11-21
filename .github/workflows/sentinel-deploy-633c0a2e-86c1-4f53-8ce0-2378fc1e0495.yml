@@ -1,4 +1,4 @@
-name: Deploy Content to bqiao-cicd-testing-eus [633c0a2e-86c1-4f53-8ce0-2378fc1e0495]
+name: Deploy Content to a-nitsha-test-ws [633c0a2e-86c1-4f53-8ce0-2378fc1e0495]
 # Note: This workflow will deploy everything in the root directory.
 # To deploy content only from a specific path (for example SentinelContent):
 #   1. Add the target path to the "paths" property like such
@@ -21,13 +21,13 @@ jobs:
   deploy-content:
     runs-on: windows-latest
     env:
-      resourceGroupName: 'bqiao-test-rg'
-      workspaceName: 'bqiao-cicd-testing-eus'
-      workspaceId: 'd35cd612-c1b0-45e9-863e-4b951a9a968d'
+      resourceGroupName: 'nitisha-test-rg'
+      workspaceName: 'a-nitsha-test-ws'
+      workspaceId: 'c28ce16f-2d4f-40ff-b944-331017b5d14d'
       directory: '${{ github.workspace }}'
-      cloudEnv: 'AzureCloud'
+      cloudEnv: 'AzureUSGovernment'
       creds: ${{ secrets.AZURE_SENTINEL_CREDENTIALS_633c0a2e86c14f538ce02378fc1e0495 }}
-      contentTypes: 'Workbook'
+      contentTypes: 'Workbook,AnalyticsRule'
       branch: 'main'
       sourceControlId: '633c0a2e-86c1-4f53-8ce0-2378fc1e0495'
       rootDirectory: '${{ github.workspace }}'
