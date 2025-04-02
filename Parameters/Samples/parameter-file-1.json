@@ -6,7 +6,7 @@
             "value": "PaloAlto-PAN-OS-BlockIP (via mapped parameter file)"
         },
         "Address Group": {
-            "Value": "SpecifyANewAddressGroup"
+            "value": "SpecifyANewAddressGroup"
         }
     }
 }
