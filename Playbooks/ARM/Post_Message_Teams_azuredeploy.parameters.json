@@ -3,7 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "PlaybookName": {
-            "Value": "Block-AADUser-Alert_Default"
+            "value": "Post-Message-Teams_Default"
+        },
+        "UserName": {
+            "value": "SentinelEcoDevs@microsoft.com"
         }
     }
 }
